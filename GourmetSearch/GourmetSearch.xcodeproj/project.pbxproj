@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BE74FBDF1C0AACFF00F09DD4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDC1C0AACFF00F09DD4 /* Alamofire.framework */; };
-		BE74FBE01C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */; };
+		BE74FBE01C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		BE74FBE11C0AACFF00F09DD4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */; };
-		BE74FBE21C0AAD1400F09DD4 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDC1C0AACFF00F09DD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE74FBE31C0AAD1400F09DD4 /* AlamofireSwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE74FBE41C0AAD1400F09DD4 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEECD02B1C0A99640088DA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02A1C0A99640088DA5F /* AppDelegate.swift */; };
 		BEECD02D1C0A99640088DA5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02C1C0A99640088DA5F /* ViewController.swift */; };
 		BEECD0301C0A99640088DA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEECD02E1C0A99640088DA5F /* Main.storyboard */; };
@@ -40,9 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				BE74FBE21C0AAD1400F09DD4 /* Alamofire.framework in CopyFiles */,
-				BE74FBE31C0AAD1400F09DD4 /* AlamofireSwiftyJSON.framework in CopyFiles */,
-				BE74FBE41C0AAD1400F09DD4 /* SwiftyJSON.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,12 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/Alamofire/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/SwiftyJSON/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = GourmetSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -464,12 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/Alamofire/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/SwiftyJSON/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = GourmetSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
