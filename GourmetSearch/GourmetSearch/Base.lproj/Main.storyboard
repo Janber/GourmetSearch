@@ -22,7 +22,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="7BY-Ze-TWy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopListItem" rowHeight="100" id="7BY-Ze-TWy" customClass="ShopListItemTableViewCell" customModule="GourmetSearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7BY-Ze-TWy" id="Lwy-nc-n8B">
@@ -124,8 +124,22 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="coupon" destination="yrA-FW-ci3" id="oLf-qx-Tyj"/>
+                                            <outlet property="iconContainer" destination="rIK-32-ehw" id="WZ9-tc-bOV"/>
+                                            <outlet property="name" destination="VDU-sa-ae0" id="WXG-8m-RFD"/>
+                                            <outlet property="nameHeight" destination="Paw-F9-hps" id="UJs-HS-MXY"/>
+                                            <outlet property="photo" destination="oBu-ek-efn" id="VBE-Cb-Lg5"/>
+                                            <outlet property="station" destination="k9m-ds-5RL" id="afS-8n-5Zq"/>
+                                            <outlet property="stationWidth" destination="TWs-w3-Jhr" id="6cC-wJ-A7K"/>
+                                            <outlet property="stationX" destination="Xn8-Az-wGV" id="rWy-JF-B6S"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LEv-Dd-MpC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2pR-w0-SSH"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -143,6 +157,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Wlv-H5-bky" id="2VL-cf-ElC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
