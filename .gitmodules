@@ -1,0 +1,3 @@
+[submodule "GourmetSearch/Alamofire-SwiftyJSON"]
+	path = GourmetSearch/Alamofire-SwiftyJSON
+	url = https://github.com/SwiftyJSON/Alamofire-SwiftyJSON.git
