@@ -12,6 +12,11 @@
 		BE74FBE11C0AACFF00F09DD4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */; };
 		BE74FBE91C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */; };
 		BE74FBEA1C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */; };
+		BE74FBEE1C0B414600F09DD4 /* YahooLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */; };
+		BE74FBEF1C0B414600F09DD4 /* YahooLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */; };
+		BE74FBF31C0B4CA000F09DD4 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDC1C0AACFF00F09DD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE74FBF41C0B4CA000F09DD4 /* AlamofireSwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE74FBF51C0B4CA000F09DD4 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEECD02B1C0A99640088DA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02A1C0A99640088DA5F /* AppDelegate.swift */; };
 		BEECD02D1C0A99640088DA5F /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02C1C0A99640088DA5F /* ShopListViewController.swift */; };
 		BEECD0301C0A99640088DA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEECD02E1C0A99640088DA5F /* Main.storyboard */; };
@@ -39,6 +44,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				BE74FBF31C0B4CA000F09DD4 /* Alamofire.framework in CopyFiles */,
+				BE74FBF41C0B4CA000F09DD4 /* AlamofireSwiftyJSON.framework in CopyFiles */,
+				BE74FBF51C0B4CA000F09DD4 /* SwiftyJSON.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,7 @@
 		BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Alamofire-SwiftyJSON/SwiftyJSON/build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		BE74FBE61C0AAD9000F09DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListItemTableViewCell.swift; sourceTree = "<group>"; };
+		BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YahooLocal.swift; sourceTree = "<group>"; };
 		BEECD0271C0A99640088DA5F /* GourmetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GourmetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEECD02A1C0A99640088DA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEECD02C1C0A99640088DA5F /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +128,14 @@
 			name = ShopList;
 			sourceTree = "<group>";
 		};
+		BE74FBEC1C0B411A00F09DD4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		BEECD01E1C0A99640088DA5F = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +159,7 @@
 		BEECD0291C0A99640088DA5F /* GourmetSearch */ = {
 			isa = PBXGroup;
 			children = (
+				BE74FBEC1C0B411A00F09DD4 /* Common */,
 				BE74FBEB1C0B34BD00F09DD4 /* ShopList */,
 				BEECD02A1C0A99640088DA5F /* AppDelegate.swift */,
 				BEECD02E1C0A99640088DA5F /* Main.storyboard */,
@@ -316,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE74FBEE1C0B414600F09DD4 /* YahooLocal.swift in Sources */,
 				BEECD0331C0A99640088DA5F /* GourmetSearch.xcdatamodeld in Sources */,
 				BEECD02D1C0A99640088DA5F /* ShopListViewController.swift in Sources */,
 				BE74FBE91C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */,
@@ -328,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE74FBEA1C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */,
+				BE74FBEF1C0B414600F09DD4 /* YahooLocal.swift in Sources */,
 				BEECD0431C0A99640088DA5F /* GourmetSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
