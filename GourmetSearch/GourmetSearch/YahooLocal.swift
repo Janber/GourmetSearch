@@ -25,7 +25,7 @@ public struct Shop: CustomStringConvertible {
     public var catchCopy: String? = nil
     public var hasCoupon = false
     public var station: String? = nil
-
+    
     public var description: String{
         get {
             var string = "\nGid: \(gid)\n"
@@ -93,7 +93,7 @@ public struct QueryCondition {
             if let unwrapped = dist {
                 params["dist"] = "\(unwrapped)"
             }
-            //device 
+            //device
             params["device"] = "mobile"
             // grouping
             params["group"] = "gid"
@@ -101,7 +101,7 @@ public struct QueryCondition {
             params["image"] = "true"
             // indutry code
             params["gc"] = "01"
-
+            
             return params
             
         }
@@ -113,6 +113,14 @@ public struct QueryCondition {
 
 
 public class YahooLocalSearch {
+    // begin in reading notification
+    public let YLSLoadStartNotification = "YLSLoadStartNotification"
+    // end of reading notification
+    public let YLSLoadCompleteNotification = "YLSLoadCompleteNotification"
+    // notification
+    public let notification = "notification"
+    
+    
     // yahoo! local search API appID
     let apiId = "dj0zaiZpPWdTQ2dYVld5QkI1aSZzPWNvbnN1bWVyc2VjcmV0Jng9NjM-"
     
@@ -148,6 +156,10 @@ public class YahooLocalSearch {
     // read the data from API
     // if reset = true then from beginning
     public func loadData(reset:Bool = false) {
+        //notification of API's first beginning
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            YLSLoadStartNotification, object: nil)
+        
         //reset = true then drop the before result
         if reset {
             shops = []
@@ -161,22 +173,30 @@ public class YahooLocalSearch {
         params["output"] = "json"
         params["start"] = String(shops.count + 1 )
         params["results"] = String(perPage)
-        // API request 
+        // API request
         Alamofire.request(.GET, apiURL, parameters: params).responseSwiftyJSON({
-        //Alamofire.request(.GET, apiURL, params, encoding: <#T##ParameterEncoding#>, headers: <#T##[String : String]?#>)
-           // finish the response then do closure
+            // finish the response then do closure
             (request, response, json, error) -> Void in
             //error
             if error != nil {
+                // notice that API do finish
+                var message = "Unknown error."
+                if let _ = error as NSError? {
+                    message = error.debugDescription
+                }
+                NSNotificationCenter.defaultCenter().postNotificationName(
+                    self.YLSLoadStartNotification,
+                    object: nil,
+                    userInfo: ["error":message])
                 return
             }
             // add shop data to self.shops
-            for (key, item) in json["Feature"] {
+            for (_, item) in json["Feature"] {
                 var shop = Shop()
                 // shopId
                 shop.gid = item["Gid"].string
                 // shop name
-                var name = item["Name"].string
+                let name = item["Name"].string
                 // the format of "&#39;" to decode
                 shop.name = name?.stringByReplacingOccurrencesOfString("&#39;",
                     withString: "'",
@@ -219,7 +239,7 @@ public class YahooLocalSearch {
                         shop.station = "\(line)"
                     }
                 }
-               // print(shop)
+                // print(shop)
                 self.shops.append(shop)
             }
             //put the totols
@@ -228,6 +248,10 @@ public class YahooLocalSearch {
             }else {
                 self.total = 0
             }
+            
+            // notice the end of API'S do
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                self.YLSLoadStartNotification, object: nil)
         })
     }
     

@@ -9,33 +9,76 @@
 import UIKit
 
 class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var yls: YahooLocalSearch = YahooLocalSearch()
+    var loadDataObserver: NSObjectProtocol?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         var qc = QueryCondition()
         qc.query = "ハンバーガー"
-
+        
         yls = YahooLocalSearch(condition: qc)
+        
+    //    print("APIリクエスト完了")
+        
+        
+        // the processing of notification which had finish readed
+        loadDataObserver = NSNotificationCenter.defaultCenter().addObserverForName(
+            yls.YLSLoadStartNotification,
+            object: nil,
+            queue: nil,
+            usingBlock: {
+                (notification) in
+                
+               self.tableView.reloadData()
+                //    print("APIリクエスト完了")
+                //if error, dialog will be open
+                if notification.userInfo != nil {
+                    if let userInfo = notification.userInfo as? [String: String!]{
+                        if userInfo["error"] != nil {
+                            let alertView = UIAlertController(title: "通信エラ−",
+                                message: "通信エラーが発生しました。",
+                                preferredStyle: .Alert)
+                            alertView.addAction(
+                                UIAlertAction(title: "OK", style: .Default){
+                                    action in return
+                                }
+                            )
+                            self.presentViewController(alertView,
+                                animated: true, completion: nil)
+                        }
+                    }
+                    
+                }
+            })
+        
         yls.loadData(true)
     }
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        // finish the notification
+        NSNotificationCenter.defaultCenter().removeObserver(self.loadDataObserver!)
+    }
+    
+    
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
@@ -43,18 +86,29 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: - UITableViewDateSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        if section == 0 {
+            return yls.shops.count
+        }
+        
+        return 0
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("ShopListItem") as! ShopListItemTableViewCell
-            cell.name.text = "\(indexPath.row)"
-            return cell
+            
+            if indexPath.section == 0 {
+                if indexPath.row < yls.shops.count {
+                    //
+                    let cell = tableView.dequeueReusableCellWithIdentifier("ShopListItem") as! ShopListItemTableViewCell
+                    cell.shop = yls.shops[indexPath.row]
+                    return cell
+                }
+            }
         }
         return UITableViewCell()
+        
     }
-
+    
+    
 }
-
