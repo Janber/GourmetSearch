@@ -22,6 +22,17 @@ class ShopListItemTableViewCell: UITableViewCell {
     
     var shop: Shop = Shop() {
         didSet {
+            // if have imageURI, then to dispalay the image
+            if let url = shop.photoUrl {
+               // photo.sd_cancelCurrentImageLoad()
+                photo.sd_cancelCurrentAnimationImagesLoad()
+                photo.sd_setImageWithURL(
+                    NSURL(string: url),
+                    placeholderImage: UIImage(named: "loading"),
+                    options: .RetryFailed )
+            }
+            
+            
             //shop name 
             name.text = shop.name
             //coupon

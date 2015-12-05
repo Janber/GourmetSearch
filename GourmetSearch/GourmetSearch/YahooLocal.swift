@@ -133,6 +133,9 @@ public class YahooLocalSearch {
     // finish readed shop
     public var shops = [Shop]()
     
+    // if data reading then true
+    var loading = false
+    
     // total numbers
     public var total = 0
     
@@ -156,6 +159,10 @@ public class YahooLocalSearch {
     // read the data from API
     // if reset = true then from beginning
     public func loadData(reset:Bool = false) {
+        
+        // if state is data reading then return
+        if loading { return }
+        
         //notification of API's first beginning
         NSNotificationCenter.defaultCenter().postNotificationName(
             YLSLoadStartNotification, object: nil)
@@ -165,6 +172,10 @@ public class YahooLocalSearch {
             shops = []
             total = 0
         }
+        
+        // if data reading then flag is on
+        loading = true
+        
         
         // get the condition dictionary
         var params = condition.queryParams
@@ -179,6 +190,9 @@ public class YahooLocalSearch {
             (request, response, json, error) -> Void in
             //error
             if error != nil {
+                // if error flag is off
+                self.loading = false
+                
                 // notice that API do finish
                 var message = "Unknown error."
                 if let _ = error as NSError? {
@@ -248,6 +262,9 @@ public class YahooLocalSearch {
             }else {
                 self.total = 0
             }
+            
+            // when API finish then flag is OFF
+            self.loading = false
             
             // notice the end of API'S do
             NSNotificationCenter.defaultCenter().postNotificationName(
