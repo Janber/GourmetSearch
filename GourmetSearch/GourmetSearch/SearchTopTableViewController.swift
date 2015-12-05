@@ -12,6 +12,9 @@ class SearchTopTableViewController: UITableViewController, UITextFieldDelegate {
     
     var freeword:UITextField? = nil
 
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        freeword?.resignFirstResponder()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

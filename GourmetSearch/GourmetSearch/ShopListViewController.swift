@@ -70,7 +70,9 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 }
             })
         
-        yls.loadData(true)
+        if yls.shops.count == 0 {
+            yls.loadData(true)
+        }
     }
     
     
@@ -137,20 +139,28 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 }
                 return cell
             }
-//            
-//            
-//            
-//            if indexPath.section == 0 {
-//                if indexPath.row < yls.shops.count {
-//                    //
-//                    let cell = tableView.dequeueReusableCellWithIdentifier("ShopListItem") as! ShopListItemTableViewCell
-//                    cell.shop = yls.shops[indexPath.row]
-//                    return cell
-//                }
-//            }
         }
         return UITableViewCell()
         
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // deselect row
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        // do segue
+        performSegueWithIdentifier("PushShopDetail", sender: indexPath)
+    }
+    
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PushShopDetail" {
+            let vc = segue.destinationViewController as? ShopDetailViewController
+            if let indexPath = sender as? NSIndexPath {
+                vc!.shop = yls.shops[indexPath.row]
+            }
+        }
     }
     
     
