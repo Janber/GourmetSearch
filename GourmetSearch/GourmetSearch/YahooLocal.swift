@@ -273,9 +273,23 @@ public class YahooLocalSearch {
     }
     
     
-    
-    
-    
+    func sortByGid(){
+        var newShops = [Shop]()
+        
+        //components separated by string ","
+        if let gids = self.condition.gid?.componentsSeparatedByString(","){
+            // loop by gid
+            for gid in gids {
+                let filtered = shops.filter{ $0.gid == gid }
+                if filtered.count > 0 {
+                    newShops.append(filtered[0])
+                }
+            }
+        }
+        // return new array
+        shops = newShops
+    }
+
     
 }
 

@@ -158,7 +158,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="cM0-4u-gTR"/>
+                    <navigationItem key="navigationItem" id="cM0-4u-gTR">
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="MTV-iT-FiX">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="BYZ-38-t0r" id="UpE-mg-lZM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Wlv-H5-bky" id="2VL-cf-ElC"/>
                         <segue destination="nha-iA-tV3" kind="show" identifier="PushShopDetail" id="z4i-4C-6FN"/>
@@ -562,7 +568,7 @@
         <!--お気に入り-->
         <scene sceneID="xH4-XN-k7t">
             <objects>
-                <navigationController id="hBy-x8-b4d" sceneMemberID="viewController">
+                <navigationController id="hBy-x8-b4d" customClass="FavoriteNavigationController" customModule="GourmetSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="お気に入り" image="tabbar-favorite" id="cg1-6j-eia"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iA1-T4-APW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -599,7 +605,7 @@
         <!--検索-->
         <scene sceneID="Phw-RY-Yf4">
             <objects>
-                <navigationController id="Twn-46-qYz" sceneMemberID="viewController">
+                <navigationController id="Twn-46-qYz" customClass="SearchNavigationController" customModule="GourmetSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="検索" image="tabbar-search" id="15s-yh-KFR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XEn-IW-7JD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -18,6 +18,14 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     override func viewDidLoad() {
+        
+        // if not favorite then edit button remove
+        if !(self.navigationController is FavoriteNavigationController) {
+            self.navigationItem.rightBarButtonItem = nil
+        }
+        
+        
+        
         super.viewDidLoad()
         
         // pull to refresh
@@ -48,6 +56,11 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
             usingBlock: {
                 (notification) in
                 
+                // gid is specify then sort
+                if self.yls.condition.gid != nil {
+                    self.yls.sortByGid()
+                }
+                
                self.tableView.reloadData()
                 //    print("APIリクエスト完了")
                 //if error, dialog will be open
@@ -71,9 +84,38 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
             })
         
         if yls.shops.count == 0 {
-            yls.loadData(true)
+    
+            if self.navigationController is FavoriteNavigationController {
+                loadFavorites()
+                self.navigationItem.title = "お気に入り"
+            } else {
+                yls.loadData(true)
+                self.navigationItem.title = "店舗一覧"
+            }
+            
         }
     }
+    
+    
+    // MARK: - loadFavorites
+    func loadFavorites(){
+        // load the User Defaults
+        Favorite.load()
+        // if have favorite then make the summary of gid, do search
+        if Favorite.favorites.count > 0 {
+            // favorite summary to display that search condition
+            var condition = QueryCondition()
+            condition.gid = Favorite.favorites.joinWithSeparator(",")
+            // setting the search condition
+            yls.condition = condition
+            yls.loadData(true)
+        } else {
+            // if no have favorite, don't do search, and notice API
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                yls.YLSLoadCompleteNotification, object: nil)
+        }
+    }
+    
     
     
     override func viewWillDisappear(animated: Bool) {
@@ -104,7 +146,15 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 NSNotificationCenter.defaultCenter().removeObserver(self.refreshObserver!)
                 refreshControl.endRefreshing()
             })
-        yls.loadData(true)
+        
+        if self.navigationController is FavoriteNavigationController {
+            // get the User Defaults
+            loadFavorites()
+        } else {
+            // tab Search
+            yls.loadData(true)
+            
+        }
         
     }
     
@@ -163,5 +213,51 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    // delete
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // favorite delete impossble
+        return self.navigationController is FavoriteNavigationController
+    }
     
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // delete
+        if editingStyle == .Delete {
+            // reflect to User Defaults
+            Favorite.remove(yls.shops[indexPath.row].gid)
+            // reflect to yls.shops
+            yls.shops.removeAtIndex(indexPath.row)
+            // reflect to UITableView
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
+    
+    
+    // move row
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // can move row
+        return self.navigationController is FavoriteNavigationController
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        // if move destination is same before move
+        if sourceIndexPath == destinationIndexPath { return }
+        // reflect to yls.shops
+        let source = yls.shops[sourceIndexPath.row]
+        yls.shops.removeAtIndex(sourceIndexPath.row)
+        yls.shops.insert(source, atIndex: destinationIndexPath.row)
+        // reflect to user defaults
+        Favorite.move(sourceIndexPath.row, destinationIndexPath.row)
+    }
+    
+    // MARK: - IBAction
+    @IBAction func editButtonTapped(sender: UIBarButtonItem) {
+        if tableView.editing {
+            tableView.setEditing(false, animated: true)
+            sender.title = "編集"
+        } else {
+            tableView.setEditing(true, animated: true)
+            sender.title = "完了"
+        }
+    }
 }
