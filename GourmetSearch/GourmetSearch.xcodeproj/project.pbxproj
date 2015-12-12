@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE07ABFF1C1A3A48008FDE09 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE07ABFE1C1A3A48008FDE09 /* SwiftyJSON.framework */; };
+		BE4766121C19AB6900DBED28 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4766111C19AB6900DBED28 /* CoreLocation.framework */; };
+		BE54517C1C1A37D30004301E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED311C14A10300EA920A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE5DFA9A1C131EDF009B7428 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFA991C131EDF009B7428 /* ShopDetailViewController.swift */; };
 		BE5DFA9B1C131EDF009B7428 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFA991C131EDF009B7428 /* ShopDetailViewController.swift */; };
 		BE5DFA9D1C1331C7009B7428 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFA9C1C1331C7009B7428 /* Favorite.swift */; };
@@ -15,16 +18,18 @@
 		BE5DFAA21C144D7E009B7428 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFAA01C144D7E009B7428 /* SearchNavigationController.swift */; };
 		BE5DFAA41C144DAC009B7428 /* FavoriteNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFAA31C144DAC009B7428 /* FavoriteNavigationController.swift */; };
 		BE5DFAA51C144DAC009B7428 /* FavoriteNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFAA31C144DAC009B7428 /* FavoriteNavigationController.swift */; };
-		BE74FBDF1C0AACFF00F09DD4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDC1C0AACFF00F09DD4 /* Alamofire.framework */; };
-		BE74FBE01C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		BE74FBE11C0AACFF00F09DD4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */; };
+		BE5DFAA71C1465FC009B7428 /* ShopMapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFAA61C1465FC009B7428 /* ShopMapDetailViewController.swift */; };
+		BE5DFAA81C1465FC009B7428 /* ShopMapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFAA61C1465FC009B7428 /* ShopMapDetailViewController.swift */; };
+		BE5DFAAA1C146AB8009B7428 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFAA91C146AB8009B7428 /* LocationService.swift */; };
+		BE5DFAAB1C146AB8009B7428 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DFAA91C146AB8009B7428 /* LocationService.swift */; };
 		BE74FBE91C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */; };
 		BE74FBEA1C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */; };
 		BE74FBEE1C0B414600F09DD4 /* YahooLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */; };
 		BE74FBEF1C0B414600F09DD4 /* YahooLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */; };
-		BE74FBF31C0B4CA000F09DD4 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDC1C0AACFF00F09DD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE74FBF41C0B4CA000F09DD4 /* AlamofireSwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE74FBF51C0B4CA000F09DD4 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEE6ED291C14A0D500EA920A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED281C14A0D500EA920A /* Alamofire.framework */; };
+		BEE6ED2A1C14A0D600EA920A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED281C14A0D500EA920A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEE6ED2F1C14A0F400EA920A /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED2C1C14A0EA00EA920A /* AlamofireSwiftyJSON.framework */; };
+		BEE6ED301C14A0F400EA920A /* AlamofireSwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED2C1C14A0EA00EA920A /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEECD02B1C0A99640088DA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02A1C0A99640088DA5F /* AppDelegate.swift */; };
 		BEECD02D1C0A99640088DA5F /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02C1C0A99640088DA5F /* ShopListViewController.swift */; };
 		BEECD0301C0A99640088DA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEECD02E1C0A99640088DA5F /* Main.storyboard */; };
@@ -56,10 +61,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				BE74FBF31C0B4CA000F09DD4 /* Alamofire.framework in CopyFiles */,
-				BE74FBF41C0B4CA000F09DD4 /* AlamofireSwiftyJSON.framework in CopyFiles */,
-				BE74FBF51C0B4CA000F09DD4 /* SwiftyJSON.framework in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE6ED2B1C14A0D600EA920A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE54517C1C1A37D30004301E /* SwiftyJSON.framework in Embed Frameworks */,
+				BEE6ED2A1C14A0D600EA920A /* Alamofire.framework in Embed Frameworks */,
+				BEE6ED301C14A0F400EA920A /* AlamofireSwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -68,18 +83,22 @@
 		37DF2B64201EE87AFDE3AA89 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCD29BDA91975FCF07E9324 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		970A75D694E478190CE731B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BE07ABFE1C1A3A48008FDE09 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Alamofire-SwiftyJSON/SwiftyJSON/build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		BE4766111C19AB6900DBED28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BE5DFA991C131EDF009B7428 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		BE5DFA9C1C1331C7009B7428 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		BE5DFAA01C144D7E009B7428 /* SearchNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		BE5DFAA31C144DAC009B7428 /* FavoriteNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteNavigationController.swift; sourceTree = "<group>"; };
+		BE5DFAA61C1465FC009B7428 /* ShopMapDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopMapDetailViewController.swift; sourceTree = "<group>"; };
+		BE5DFAA91C146AB8009B7428 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		BE74FBD41C0AA8F600F09DD4 /* GourmetSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GourmetSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 		BE74FBD51C0AA8F600F09DD4 /* GourmetSearchTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GourmetSearchTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		BE74FBDC1C0AACFF00F09DD4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Alamofire-SwiftyJSON/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireSwiftyJSON.framework; path = "Alamofire-SwiftyJSON/build/Debug-iphoneos/AlamofireSwiftyJSON.framework"; sourceTree = "<group>"; };
-		BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Alamofire-SwiftyJSON/SwiftyJSON/build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		BE74FBE61C0AAD9000F09DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListItemTableViewCell.swift; sourceTree = "<group>"; };
 		BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YahooLocal.swift; sourceTree = "<group>"; };
+		BEE6ED281C14A0D500EA920A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/ken/Library/Developer/Xcode/DerivedData/GourmetSearch-bsfxqmftubhotmcgfgwqzkgfhkic/Build/Products/Debug-iphoneos/Alamofire.framework"; sourceTree = "<absolute>"; };
+		BEE6ED2C1C14A0EA00EA920A /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AlamofireSwiftyJSON.framework; path = "/Users/ken/Library/Developer/Xcode/DerivedData/GourmetSearch-bsfxqmftubhotmcgfgwqzkgfhkic/Build/Products/Debug-iphoneos/AlamofireSwiftyJSON.framework"; sourceTree = "<absolute>"; };
+		BEE6ED311C14A10300EA920A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyJSON.framework; path = "/Users/ken/Library/Developer/Xcode/DerivedData/GourmetSearch-bsfxqmftubhotmcgfgwqzkgfhkic/Build/Products/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<absolute>"; };
 		BEECD0271C0A99640088DA5F /* GourmetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GourmetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEECD02A1C0A99640088DA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEECD02C1C0A99640088DA5F /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
@@ -100,10 +119,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE74FBDF1C0AACFF00F09DD4 /* Alamofire.framework in Frameworks */,
-				BE74FBE01C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework in Frameworks */,
-				BE74FBE11C0AACFF00F09DD4 /* SwiftyJSON.framework in Frameworks */,
+				BE07ABFF1C1A3A48008FDE09 /* SwiftyJSON.framework in Frameworks */,
+				BE4766121C19AB6900DBED28 /* CoreLocation.framework in Frameworks */,
 				FEBBE90174DF2B6FF0D41612 /* libPods.a in Frameworks */,
+				BEE6ED2F1C14A0F400EA920A /* AlamofireSwiftyJSON.framework in Frameworks */,
+				BEE6ED291C14A0D500EA920A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,9 +149,8 @@
 		60D302F8DD8D1F0C4994553D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE74FBDC1C0AACFF00F09DD4 /* Alamofire.framework */,
-				BE74FBDD1C0AACFF00F09DD4 /* AlamofireSwiftyJSON.framework */,
-				BE74FBDE1C0AACFF00F09DD4 /* SwiftyJSON.framework */,
+				BE07ABFE1C1A3A48008FDE09 /* SwiftyJSON.framework */,
+				BE4766111C19AB6900DBED28 /* CoreLocation.framework */,
 				37DF2B64201EE87AFDE3AA89 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -154,6 +173,7 @@
 				BEEF25021C126EEA00496558 /* SearchTopTableViewController.swift */,
 				BEEF25051C12939200496558 /* FreewordTableViewCell.swift */,
 				BE5DFA991C131EDF009B7428 /* ShopDetailViewController.swift */,
+				BE5DFAA61C1465FC009B7428 /* ShopMapDetailViewController.swift */,
 			);
 			name = ShopList;
 			sourceTree = "<group>";
@@ -163,6 +183,7 @@
 			children = (
 				BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */,
 				BE5DFA9C1C1331C7009B7428 /* Favorite.swift */,
+				BE5DFAA91C146AB8009B7428 /* LocationService.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -170,6 +191,9 @@
 		BEECD01E1C0A99640088DA5F = {
 			isa = PBXGroup;
 			children = (
+				BEE6ED311C14A10300EA920A /* SwiftyJSON.framework */,
+				BEE6ED2C1C14A0EA00EA920A /* AlamofireSwiftyJSON.framework */,
+				BEE6ED281C14A0D500EA920A /* Alamofire.framework */,
 				BEECD0291C0A99640088DA5F /* GourmetSearch */,
 				BEECD0411C0A99640088DA5F /* GourmetSearchTests */,
 				BEECD0281C0A99640088DA5F /* Products */,
@@ -228,6 +252,7 @@
 				F87FF9BB111F959D4B85CE3D /* Embed Pods Frameworks */,
 				4EC000CF80251924422D898E /* Copy Pods Resources */,
 				BE74FBDB1C0AACD300F09DD4 /* CopyFiles */,
+				BEE6ED2B1C14A0D600EA920A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +293,11 @@
 				TargetAttributes = {
 					BEECD0261C0A99640088DA5F = {
 						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BEECD03D1C0A99640088DA5F = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -375,7 +405,9 @@
 				BE5DFA9A1C131EDF009B7428 /* ShopDetailViewController.swift in Sources */,
 				BE5DFAA41C144DAC009B7428 /* FavoriteNavigationController.swift in Sources */,
 				BE5DFA9D1C1331C7009B7428 /* Favorite.swift in Sources */,
+				BE5DFAAA1C146AB8009B7428 /* LocationService.swift in Sources */,
 				BEEF25031C126EEA00496558 /* SearchTopTableViewController.swift in Sources */,
+				BE5DFAA71C1465FC009B7428 /* ShopMapDetailViewController.swift in Sources */,
 				BEECD02B1C0A99640088DA5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +422,8 @@
 				BE74FBEF1C0B414600F09DD4 /* YahooLocal.swift in Sources */,
 				BEECD0431C0A99640088DA5F /* GourmetSearchTests.swift in Sources */,
 				BEEF25041C126EEA00496558 /* SearchTopTableViewController.swift in Sources */,
+				BE5DFAAB1C146AB8009B7428 /* LocationService.swift in Sources */,
+				BE5DFAA81C1465FC009B7428 /* ShopMapDetailViewController.swift in Sources */,
 				BEEF25071C12939200496558 /* FreewordTableViewCell.swift in Sources */,
 				BE5DFA9B1C131EDF009B7428 /* ShopDetailViewController.swift in Sources */,
 				BE5DFAA51C144DAC009B7428 /* FavoriteNavigationController.swift in Sources */,
@@ -444,7 +478,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -514,10 +548,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/SwiftyJSON/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = GourmetSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.janber.GourmetSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GourmetSearch/GourmetSearch-Bridging-Header.h";
@@ -531,10 +572,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Alamofire-SwiftyJSON/SwiftyJSON/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = GourmetSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				OTHER_CODE_SIGN_FLAGS = "";
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.janber.GourmetSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GourmetSearch/GourmetSearch-Bridging-Header.h";

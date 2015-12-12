@@ -26,6 +26,24 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // map
+        if let lat = shop.lat {
+            if let lon = shop.lon {
+                // map display scole specity
+                let cllc = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                let mkcr = MKCoordinateRegionMakeWithDistance(cllc, 200, 200)
+                map.setRegion(mkcr, animated: false)
+                
+                // set pin
+                let pin = MKPointAnnotation()
+                pin.coordinate = cllc
+                map.addAnnotation(pin)
+            }
+            // reflect to favorite button
+            updateFavoriteButton()
+        }
+        
 
         // Do any additional setup after loading the view.
         // photo
@@ -46,8 +64,8 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
         // address
         address.text = shop.address
         
-        // favorite
-        updateFavoriteButton()
+//        // favorite
+//        updateFavoriteButton()
         
     }
     
@@ -125,8 +143,19 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    // MARK: - Navigition
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PushMapDetail" {
+            let vc = segue.destinationViewController as! ShopMapDetailViewController
+            vc.shop = shop
+        }
+    }
+    
+    
+    
     @IBAction func addressTapped(sender: UIButton) {
-        print("addressTapped")
+       // print("addressTapped")
+        performSegueWithIdentifier("PushMapDetail", sender: nil)
     }
     
 
