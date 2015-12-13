@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Social
 
 class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -22,9 +23,59 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIImageP
     @IBOutlet weak var favoriteIcon: UIImageView!
     @IBOutlet weak var favoriteLabel: UILabel!
     
+    @IBOutlet weak var line: UIButton!
+    @IBOutlet weak var twitter: UIButton!
+    @IBOutlet weak var facebook: UIButton!
+    
     
     let ipc = UIImagePickerController()
     var shop = Shop()
+    
+    
+    @IBAction func lineTapped(sender: AnyObject) {
+        var message = ""
+        if let name = shop.name {
+            message += name + "\n"
+        }
+        if let url = shop.url {
+            message += url + "\n"
+        }
+        if let encoded = message.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()){
+            if let uri = NSURL(string: "line://msg/text" + encoded) {
+                UIApplication.sharedApplication().openURL(uri)
+            }
+            
+        }
+        
+    }
+    
+    // MARK: - twitter share
+    func share(type:String) {
+        let vc = SLComposeViewController(forServiceType: type)
+        if let name = shop.name {
+            vc.setInitialText(name + "\n")
+        }
+        if let gid = shop.gid {
+            if ShopPhoto.sharedInstance?.count(gid) > 0 {
+                vc.addImage(ShopPhoto.sharedInstance?.image(gid, index: 0))
+            }
+            
+        }
+        if let url = shop.url {
+            vc.addURL(NSURL(string: url))
+        }
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    
+    
+    @IBAction func twitterTapped(sender: AnyObject) {
+        share(SLServiceTypeTwitter)
+    }
+
+    @IBAction func facebookTapped(sender: AnyObject) {
+        share(SLServiceTypeFacebook)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +125,18 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIImageP
         
         ipc.allowsEditing = true
         
+        // Facebook,Twitter,LINEの利用可能状態をチェック
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string:"line://")!){
+            line.enabled = true
+        }
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            twitter.enabled = true
+        }
+
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            facebook.enabled = true
+        }
     }
     
     // MARK: - updateFavoriteButton
@@ -140,9 +203,41 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIImageP
     
     
     
-    
+    // MARK: - IBAction
     @IBAction func telTapped(sender: UIButton) {
-        print("telTapped")
+    
+        if let tel = shop.tel {
+            let url = NSURL(string: "tel:\(tel)")
+            if (url == nil){ return }
+            
+            if !UIApplication.sharedApplication().canOpenURL(url!){
+                let alert = UIAlertController(title: "電話をかけることができません",
+                    message: "この端末には電話機能が搭載されていません。",
+                    preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                presentViewController(alert, animated: true, completion: nil)
+                return
+            }
+            
+            
+            if let name = shop.name {
+                let alert = UIAlertController(title: name,
+                    message: "\(name)に電話をかけます。",
+                    preferredStyle: .Alert)
+                alert.addAction(
+                    UIAlertAction(title: "電話をかける", style: .Default, handler: {
+                        action in
+                        UIApplication.sharedApplication().openURL(url!)
+                        return
+                    }))
+                alert.addAction(
+                    UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil ))
+                presentViewController(alert, animated: true, completion: nil )
+                
+            }
+
+        }
+    
     }
     
     

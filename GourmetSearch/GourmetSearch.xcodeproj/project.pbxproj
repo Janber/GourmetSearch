@@ -34,6 +34,8 @@
 		BE74FBEA1C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */; };
 		BE74FBEE1C0B414600F09DD4 /* YahooLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */; };
 		BE74FBEF1C0B414600F09DD4 /* YahooLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */; };
+		BEC874271C1D5E4E007602FE /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC874261C1D5E4E007602FE /* PhotoDetailViewController.swift */; };
+		BEC874281C1D5E4E007602FE /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC874261C1D5E4E007602FE /* PhotoDetailViewController.swift */; };
 		BECBF6A81C1BDEEE008B4602 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBF6A71C1BDEEE008B4602 /* MobileCoreServices.framework */; };
 		BEE6ED291C14A0D500EA920A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED281C14A0D500EA920A /* Alamofire.framework */; };
 		BEE6ED2A1C14A0D600EA920A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED281C14A0D500EA920A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -109,6 +111,7 @@
 		BE74FBE61C0AAD9000F09DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BE74FBE81C0B347000F09DD4 /* ShopListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListItemTableViewCell.swift; sourceTree = "<group>"; };
 		BE74FBED1C0B414600F09DD4 /* YahooLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YahooLocal.swift; sourceTree = "<group>"; };
+		BEC874261C1D5E4E007602FE /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		BECBF6A71C1BDEEE008B4602 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BEE6ED281C14A0D500EA920A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/ken/Library/Developer/Xcode/DerivedData/GourmetSearch-bsfxqmftubhotmcgfgwqzkgfhkic/Build/Products/Debug-iphoneos/Alamofire.framework"; sourceTree = "<absolute>"; };
 		BEE6ED2C1C14A0EA00EA920A /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AlamofireSwiftyJSON.framework; path = "/Users/ken/Library/Developer/Xcode/DerivedData/GourmetSearch-bsfxqmftubhotmcgfgwqzkgfhkic/Build/Products/Debug-iphoneos/AlamofireSwiftyJSON.framework"; sourceTree = "<absolute>"; };
@@ -178,6 +181,7 @@
 				BE07AC521C1BC40E008FDE09 /* PhotoListViewController.swift */,
 				BE07AC551C1BC45A008FDE09 /* PhotoListItemCollectionViewCell.swift */,
 				BE07AC581C1BC496008FDE09 /* PhotoListItemCollectionViewHeader.swift */,
+				BEC874261C1D5E4E007602FE /* PhotoDetailViewController.swift */,
 			);
 			name = PhotoList;
 			sourceTree = "<group>";
@@ -430,6 +434,7 @@
 				BE5DFAA11C144D7E009B7428 /* SearchNavigationController.swift in Sources */,
 				BEECD0331C0A99640088DA5F /* GourmetSearch.xcdatamodeld in Sources */,
 				BE07AC531C1BC40E008FDE09 /* PhotoListViewController.swift in Sources */,
+				BEC874271C1D5E4E007602FE /* PhotoDetailViewController.swift in Sources */,
 				BEECD02D1C0A99640088DA5F /* ShopListViewController.swift in Sources */,
 				BE74FBE91C0B347000F09DD4 /* ShopListItemTableViewCell.swift in Sources */,
 				BE5DFA9A1C131EDF009B7428 /* ShopDetailViewController.swift in Sources */,
@@ -454,6 +459,7 @@
 				BE07AC5A1C1BC496008FDE09 /* PhotoListItemCollectionViewHeader.swift in Sources */,
 				BE07AC541C1BC40E008FDE09 /* PhotoListViewController.swift in Sources */,
 				BE07AC571C1BC45A008FDE09 /* PhotoListItemCollectionViewCell.swift in Sources */,
+				BEC874281C1D5E4E007602FE /* PhotoDetailViewController.swift in Sources */,
 				BE74FBEF1C0B414600F09DD4 /* YahooLocal.swift in Sources */,
 				BEECD0431C0A99640088DA5F /* GourmetSearchTests.swift in Sources */,
 				BEEF25041C126EEA00496558 /* SearchTopTableViewController.swift in Sources */,

@@ -26,6 +26,16 @@ public struct Shop: CustomStringConvertible {
     public var hasCoupon = false
     public var station: String? = nil
     
+    public var url: String? {
+        get {
+            if let gid = gid {
+                return "http://loco.yahoo.co.jp/place/g-\(gid)/"
+            }
+            return nil
+        }
+    }
+    
+    
     public var description: String{
         get {
             var string = "\nGid: \(gid)\n"
@@ -219,7 +229,7 @@ public class YahooLocalSearch {
                 // yomi
                 shop.yomi = item["Property"]["Yomi"].string
                 // tel
-                shop.tel = item["Property"]["Tell"].string
+                shop.tel = item["Property"]["Tel1"].string
                 // add
                 shop.address = item["Property"]["Address"].string
                 // lat & Lon
