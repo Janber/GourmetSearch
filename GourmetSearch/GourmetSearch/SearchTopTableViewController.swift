@@ -37,6 +37,10 @@ CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // MARK: ↓これが足りなかった
+    
+        // MARK: ↑これが足りなかった
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
+class ShopDetailViewController: UIViewController, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var photo: UIImageView!
@@ -22,6 +22,8 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var favoriteIcon: UIImageView!
     @IBOutlet weak var favoriteLabel: UILabel!
     
+    
+    let ipc = UIImagePickerController()
     var shop = Shop()
 
     override func viewDidLoad() {
@@ -66,6 +68,11 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
         
 //        // favorite
 //        updateFavoriteButton()
+        
+        // UIImagePickerControllerDelegate
+        ipc.delegate = self
+        
+        ipc.allowsEditing = true
         
     }
     
@@ -119,10 +126,6 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
     
     
     
-    
-    
-    
-    
     override func viewDidLayoutSubviews() {
         let nameFrame = name.sizeThatFits(
         CGSizeMake(name.frame.size.width, CGFloat.max))
@@ -163,4 +166,56 @@ class ShopDetailViewController: UIViewController, UIScrollViewDelegate {
         Favorite.toggle(shop.gid)
         updateFavoriteButton()
     }
+    
+    
+    //MARK: - UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        ipc.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    
+    @IBAction func addPhotoTapped(sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: nil,
+            message: nil,
+            preferredStyle: .ActionSheet)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera){
+            alert.addAction(
+            UIAlertAction(title: "写真を撮る", style: .Default, handler: {
+                action in
+                
+                self.ipc.sourceType = .Camera
+                self.presentViewController(self.ipc,
+                    animated: true, completion: nil)
+                
+            }))
+            
+        }
+        
+        alert.addAction(UIAlertAction(title: "写真を選択", style: .Default, handler: { action in
+            
+            self.ipc.sourceType = .PhotoLibrary
+            self.presentViewController(self.ipc, animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: { action in
+    
+        }))
+        
+       presentViewController(alert, animated: true, completion: nil)
+
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+            ShopPhoto.sharedInstance?.append(shop: shop, image: image)
+        }
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        // ipc.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

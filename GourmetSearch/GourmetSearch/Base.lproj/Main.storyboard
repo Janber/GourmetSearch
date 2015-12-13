@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wlv-H5-bky">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopListItem" rowHeight="100" id="7BY-Ze-TWy" customClass="ShopListItemTableViewCell" customModule="GourmetSearch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7BY-Ze-TWy" id="Lwy-nc-n8B">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
@@ -164,6 +164,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2879" y="787"/>
+        </scene>
+        <!--写真-->
+        <scene sceneID="EnG-sF-UmU">
+            <objects>
+                <navigationController id="ziA-0i-A52" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="写真" image="tabbar-photo" id="ZSH-38-huF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nm-Pt-4wU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Khz-Nx-xmw" kind="relationship" relationship="rootViewController" id="n7I-U9-tH2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrx-Ff-KYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248" y="1943"/>
+        </scene>
+        <!--写真一覧-->
+        <scene sceneID="GLf-s6-eKw">
+            <objects>
+                <viewController id="Khz-Nx-xmw" customClass="PhotoListViewController" customModule="GourmetSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G3X-tL-Mo1"/>
+                        <viewControllerLayoutGuide type="bottom" id="pp7-a0-2aY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2O1-g0-sJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nsR-z6-Mna">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VNa-et-ehR">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoListItem" id="JWp-72-z41" customClass="PhotoListItemCollectionViewCell" customModule="GourmetSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-ga-hNx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="5lC-ga-hNx" firstAttribute="leading" secondItem="JWp-72-z41" secondAttribute="leading" id="7as-sq-HF7"/>
+                                            <constraint firstAttribute="bottom" secondItem="5lC-ga-hNx" secondAttribute="bottom" id="TcB-bp-q9E"/>
+                                            <constraint firstAttribute="trailing" secondItem="5lC-ga-hNx" secondAttribute="trailing" id="iga-yg-8N5"/>
+                                            <constraint firstItem="5lC-ga-hNx" firstAttribute="top" secondItem="JWp-72-z41" secondAttribute="top" id="zS4-Rf-LLb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photo" destination="5lC-ga-hNx" id="Ff9-0L-RcO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoListHeader" id="lna-hJ-wE7" customClass="PhotoListItemCollectionViewHeader" customModule="GourmetSearch" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmc-z2-Or7">
+                                            <rect key="frame" x="8" y="14.5" width="584" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="GbW-dm-8tK"/>
+                                                <constraint firstAttribute="height" constant="21" id="SCE-24-w6E"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="GbW-dm-8tK"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Bmc-z2-Or7" secondAttribute="trailing" constant="8" id="Aiw-aS-baf"/>
+                                        <constraint firstItem="Bmc-z2-Or7" firstAttribute="centerY" secondItem="lna-hJ-wE7" secondAttribute="centerY" id="Cue-RE-GqJ"/>
+                                        <constraint firstItem="Bmc-z2-Or7" firstAttribute="top" secondItem="lna-hJ-wE7" secondAttribute="top" id="MYD-dD-f7z"/>
+                                        <constraint firstItem="Bmc-z2-Or7" firstAttribute="top" secondItem="lna-hJ-wE7" secondAttribute="top" id="NUx-fq-Hhx"/>
+                                        <constraint firstItem="Bmc-z2-Or7" firstAttribute="leading" secondItem="lna-hJ-wE7" secondAttribute="leading" constant="8" id="da2-75-NbQ"/>
+                                        <constraint firstItem="Bmc-z2-Or7" firstAttribute="centerY" secondItem="lna-hJ-wE7" secondAttribute="centerY" id="qiC-Yv-qEz"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Cue-RE-GqJ"/>
+                                            <exclude reference="MYD-dD-f7z"/>
+                                            <exclude reference="NUx-fq-Hhx"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <outlet property="title" destination="Bmc-z2-Or7" id="cee-f9-Lgc"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="Khz-Nx-xmw" id="p6R-LY-0bc"/>
+                                    <outlet property="delegate" destination="Khz-Nx-xmw" id="nmD-gQ-RQ7"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nsR-z6-Mna" firstAttribute="top" secondItem="G3X-tL-Mo1" secondAttribute="bottom" id="CL2-b4-X6Z"/>
+                            <constraint firstAttribute="trailing" secondItem="nsR-z6-Mna" secondAttribute="trailing" id="FqK-k4-rDl"/>
+                            <constraint firstItem="pp7-a0-2aY" firstAttribute="top" secondItem="nsR-z6-Mna" secondAttribute="bottom" id="Q2v-s9-YpG"/>
+                            <constraint firstItem="nsR-z6-Mna" firstAttribute="leading" secondItem="2O1-g0-sJ2" secondAttribute="leading" id="a1n-e3-7YX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="写真一覧" id="VT3-JN-YFe"/>
+                    <connections>
+                        <outlet property="collectionView" destination="nsR-z6-Mna" id="tah-oK-RIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dff-ky-fNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="1943"/>
         </scene>
         <!--Shop Detail View Controller-->
         <scene sceneID="dS3-BB-9Kb">
@@ -433,6 +558,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="r3o-e2-PHB">
+                        <barButtonItem key="rightBarButtonItem" title="写真を追加" id="wHp-be-wVG">
+                            <connections>
+                                <action selector="addPhotoTapped:" destination="nha-iA-tV3" id="Ikd-h5-CBa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="address" destination="bP0-1C-Xin" id="zVv-hB-VpM"/>
                         <outlet property="addressContainerHeight" destination="JwT-kK-TaL" id="hYu-AV-xUm"/>
@@ -605,11 +737,12 @@
                     <connections>
                         <segue destination="Twn-46-qYz" kind="relationship" relationship="viewControllers" id="cJh-KX-byw"/>
                         <segue destination="hBy-x8-b4d" kind="relationship" relationship="viewControllers" id="mIs-k0-s7H"/>
+                        <segue destination="ziA-0i-A52" kind="relationship" relationship="viewControllers" id="wqC-gi-fGo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzl-hm-ZeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="787"/>
+            <point key="canvasLocation" x="292" y="1355"/>
         </scene>
         <!--検索-->
         <scene sceneID="Phw-RY-Yf4">
@@ -631,9 +764,10 @@
     </scenes>
     <resources>
         <image name="tabbar-favorite" width="30" height="30"/>
+        <image name="tabbar-photo" width="30" height="30"/>
         <image name="tabbar-search" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dDv-wD-UGd"/>
+        <segue reference="TKe-Yo-4rp"/>
     </inferredMetricsTieBreakers>
 </document>
