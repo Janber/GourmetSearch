@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>SDWebImage</string>
+		<key>License</key>
+		<string>Copyright (c) 2009 Olivier Poitrey &lt;rs@dailymotion.com&gt;</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>AlamofireSwifyJSON</string>
+		<key>License</key>
+		<string>The MIT License (MIT)</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>SwiftyJSON</string>
+		<key>License</key>
+		<string>The MIT License (MIT)</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Alamofire</string>
+		<key>License</key>
+		<string>Copyright (c) 2014–2015 Alamofire Software Foundation (http://alamofire.org/)</string>
+	</dict>
+</array>
+</plist>
