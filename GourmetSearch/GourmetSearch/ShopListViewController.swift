@@ -180,6 +180,10 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         if indexPath.section == 0 {
             if indexPath.row < yls.shops.count {
                 let cell = tableView.dequeueReusableCellWithIdentifier("ShopListItem") as! ShopListItemTableViewCell
+                
+                cell.lat = yls.condition.lat
+                cell.lon = yls.condition.lon
+                
                 cell.shop = yls.shops[indexPath.row]
                 
                 if yls.shops.count < yls.total {

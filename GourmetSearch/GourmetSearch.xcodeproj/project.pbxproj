@@ -48,7 +48,6 @@
 		BEE462391C32A06300F7C683 /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE462371C32A06300F7C683 /* LicenseDetailViewController.swift */; };
 		BEE6ED291C14A0D500EA920A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED281C14A0D500EA920A /* Alamofire.framework */; };
 		BEE6ED2A1C14A0D600EA920A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED281C14A0D500EA920A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEE6ED2F1C14A0F400EA920A /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED2C1C14A0EA00EA920A /* AlamofireSwiftyJSON.framework */; };
 		BEE6ED301C14A0F400EA920A /* AlamofireSwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6ED2C1C14A0EA00EA920A /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEECD02B1C0A99640088DA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02A1C0A99640088DA5F /* AppDelegate.swift */; };
 		BEECD02D1C0A99640088DA5F /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECD02C1C0A99640088DA5F /* ShopListViewController.swift */; };
@@ -154,7 +153,6 @@
 				BE07ABFF1C1A3A48008FDE09 /* SwiftyJSON.framework in Frameworks */,
 				BE4766121C19AB6900DBED28 /* CoreLocation.framework in Frameworks */,
 				FEBBE90174DF2B6FF0D41612 /* libPods.a in Frameworks */,
-				BEE6ED2F1C14A0F400EA920A /* AlamofireSwiftyJSON.framework in Frameworks */,
 				BEE6ED291C14A0D500EA920A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

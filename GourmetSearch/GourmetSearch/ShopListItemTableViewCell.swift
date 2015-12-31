@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ShopListItemTableViewCell: UITableViewCell {
     
@@ -15,10 +16,16 @@ class ShopListItemTableViewCell: UITableViewCell {
     @IBOutlet weak var iconContainer: UIView!
     @IBOutlet weak var coupon: UILabel!
     @IBOutlet weak var station: UILabel!
+    @IBOutlet weak var dis: UILabel!
+   
     
     @IBOutlet weak var nameHeight: NSLayoutConstraint!
     @IBOutlet weak var stationWidth: NSLayoutConstraint!
     @IBOutlet weak var stationX: NSLayoutConstraint!
+    
+    var lat: Double? = nil
+    var lon: Double? = nil
+    
     
     var shop: Shop = Shop() {
         didSet {
@@ -68,6 +75,25 @@ class ShopListItemTableViewCell: UITableViewCell {
             } else {
                 station.hidden = true
             }
+            
+            // distance
+            if lat != nil && lon != nil {
+            
+            let currentLocation = CLLocation(latitude: lat!,longitude: lon!)
+            let targetLocation = CLLocation(latitude: shop.lat!,longitude:  shop.lon!)
+            
+            // 距離計算
+            let distance = currentLocation.distanceFromLocation(targetLocation)
+            // 1000mを超える場合はキロメートで表示
+            let distanceText = distance / 1000.0 > 1.0 ?
+                "\(floor(distance / 1000.0)) km"
+                :
+            "\(floor(distance)) m"
+                dis.text = distanceText
+            } else {
+                dis.hidden = true
+            }
+            
         }
     }
     

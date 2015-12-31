@@ -97,6 +97,12 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVN-DY-Z51">
+                                                    <rect key="frame" x="107" y="39" width="115" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="VDU-sa-ae0" firstAttribute="top" secondItem="Lwy-nc-n8B" secondAttribute="top" constant="8" id="Gvh-hY-ebv"/>
@@ -119,6 +125,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="coupon" destination="yrA-FW-ci3" id="oLf-qx-Tyj"/>
+                                            <outlet property="dis" destination="eVN-DY-Z51" id="A10-De-2qw"/>
                                             <outlet property="iconContainer" destination="rIK-32-ehw" id="WZ9-tc-bOV"/>
                                             <outlet property="name" destination="VDU-sa-ae0" id="WXG-8m-RFD"/>
                                             <outlet property="nameHeight" destination="Paw-F9-hps" id="UJs-HS-MXY"/>
