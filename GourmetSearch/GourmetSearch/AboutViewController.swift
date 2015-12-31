@@ -36,11 +36,11 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-//        if indexPath.row == 0 {
-//            let cell = tableView.dequeueReusableCellWithIdentifier("AboutApp")! as UITableViewCell
-//            return cell
-//        }
-//        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("AboutApp")! as UITableViewCell
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("License")! as UITableViewCell
         return cell
     }

@@ -12,6 +12,7 @@ class LicenseDetailViewController: UIViewController {
 
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var textHeight: NSLayoutConstraint!
+
     
     var name = ""
     var license = ""
