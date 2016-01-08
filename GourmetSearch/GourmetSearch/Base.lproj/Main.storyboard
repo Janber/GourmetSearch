@@ -100,7 +100,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVN-DY-Z51">
                                                     <rect key="frame" x="107" y="39" width="115" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nsR-z6-Mna">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VNa-et-ehR">
                                     <size key="itemSize" width="50" height="50"/>
@@ -240,7 +240,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmc-z2-Or7">
-                                            <rect key="frame" x="8" y="14.5" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="14" width="584" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="GbW-dm-8tK"/>
                                                 <constraint firstAttribute="height" constant="21" id="SCE-24-w6E"/>
@@ -284,9 +284,15 @@
                         <constraints>
                             <constraint firstItem="nsR-z6-Mna" firstAttribute="top" secondItem="G3X-tL-Mo1" secondAttribute="bottom" id="CL2-b4-X6Z"/>
                             <constraint firstAttribute="trailing" secondItem="nsR-z6-Mna" secondAttribute="trailing" id="FqK-k4-rDl"/>
+                            <constraint firstItem="nsR-z6-Mna" firstAttribute="top" secondItem="2O1-g0-sJ2" secondAttribute="top" id="ID9-BX-vrW"/>
                             <constraint firstItem="pp7-a0-2aY" firstAttribute="top" secondItem="nsR-z6-Mna" secondAttribute="bottom" id="Q2v-s9-YpG"/>
                             <constraint firstItem="nsR-z6-Mna" firstAttribute="leading" secondItem="2O1-g0-sJ2" secondAttribute="leading" id="a1n-e3-7YX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CL2-b4-X6Z"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="写真一覧" id="VT3-JN-YFe"/>
                     <connections>
@@ -345,7 +351,7 @@
                                                         <constraint firstAttribute="width" constant="197" id="t5Z-SG-ZZF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVq-wh-ejQ">
@@ -354,7 +360,7 @@
                                                         <constraint firstAttribute="width" constant="71" id="k7P-gs-qNJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -387,7 +393,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ライセンス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQa-7L-k7Z">
                                                     <rect key="frame" x="15" y="11" width="93" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -503,7 +509,7 @@
                                                     <constraint firstAttribute="height" constant="300" id="t9B-zJ-lD2"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
