@@ -40,10 +40,12 @@
 		BEC874321C1EE60F007602FE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC874301C1EE60F007602FE /* AboutViewController.swift */; };
 		BEC874341C1F0AB6007602FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC874331C1F0AB6007602FE /* Images.xcassets */; };
 		BECBF6A81C1BDEEE008B4602 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBF6A71C1BDEEE008B4602 /* MobileCoreServices.framework */; };
-		BEE0C7C71C3EBD1C009D8D20 /* AlamofireSwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C61C3EBD1B009D8D20 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEE0C7C91C3EBECD009D8D20 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C81C3EBECD009D8D20 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEE0C7CB1C3EBF06009D8D20 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7CA1C3EBF06009D8D20 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEE0C7CC1C3EBF9A009D8D20 /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C61C3EBD1B009D8D20 /* AlamofireSwiftyJSON.framework */; };
+		BED54C0B1C47EB820084517A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C81C3EBECD009D8D20 /* SwiftyJSON.framework */; };
+		BED54C0C1C47EB820084517A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C81C3EBECD009D8D20 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BED54C0D1C47EB820084517A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7CA1C3EBF06009D8D20 /* Alamofire.framework */; };
+		BED54C0E1C47EB820084517A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7CA1C3EBF06009D8D20 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BED54C0F1C47EB820084517A /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C61C3EBD1B009D8D20 /* AlamofireSwiftyJSON.framework */; };
+		BED54C101C47EB820084517A /* AlamofireSwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C61C3EBD1B009D8D20 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEE462351C32928900F7C683 /* LicenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE462341C32928900F7C683 /* LicenseListViewController.swift */; };
 		BEE462361C32928900F7C683 /* LicenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE462341C32928900F7C683 /* LicenseListViewController.swift */; };
 		BEE462381C32A06300F7C683 /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE462371C32A06300F7C683 /* LicenseDetailViewController.swift */; };
@@ -60,11 +62,6 @@
 		BEEF25041C126EEA00496558 /* SearchTopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF25021C126EEA00496558 /* SearchTopTableViewController.swift */; };
 		BEEF25061C12939200496558 /* FreewordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF25051C12939200496558 /* FreewordTableViewCell.swift */; };
 		BEEF25071C12939200496558 /* FreewordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF25051C12939200496558 /* FreewordTableViewCell.swift */; };
-		BEFA065F1C3EC43500BFEB39 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7C81C3EBECD009D8D20 /* SwiftyJSON.framework */; };
-		BEFA06631C3EC87500BFEB39 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEE0C7C81C3EBECD009D8D20 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEFA06641C3EC87500BFEB39 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEE0C7CA1C3EBF06009D8D20 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEFA06651C3EC87500BFEB39 /* AlamofireSwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEE0C7C61C3EBD1B009D8D20 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEFDE4511C3EC03400A1B66B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0C7CA1C3EBF06009D8D20 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,27 +75,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BE74FBDB1C0AACD300F09DD4 /* CopyFiles */ = {
+		BED54C111C47EB820084517A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-				BEFA06631C3EC87500BFEB39 /* SwiftyJSON.framework in CopyFiles */,
-				BEFA06641C3EC87500BFEB39 /* Alamofire.framework in CopyFiles */,
-				BEFA06651C3EC87500BFEB39 /* AlamofireSwiftyJSON.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEE6ED2B1C14A0D600EA920A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BEE0C7CB1C3EBF06009D8D20 /* Alamofire.framework in Embed Frameworks */,
-				BEE0C7C91C3EBECD009D8D20 /* SwiftyJSON.framework in Embed Frameworks */,
-				BEE0C7C71C3EBD1C009D8D20 /* AlamofireSwiftyJSON.framework in Embed Frameworks */,
+				BED54C0C1C47EB820084517A /* SwiftyJSON.framework in Embed Frameworks */,
+				BED54C101C47EB820084517A /* AlamofireSwiftyJSON.framework in Embed Frameworks */,
+				BED54C0E1C47EB820084517A /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,11 +140,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEFA065F1C3EC43500BFEB39 /* SwiftyJSON.framework in Frameworks */,
-				BEFDE4511C3EC03400A1B66B /* Alamofire.framework in Frameworks */,
-				BEE0C7CC1C3EBF9A009D8D20 /* AlamofireSwiftyJSON.framework in Frameworks */,
+				BED54C0B1C47EB820084517A /* SwiftyJSON.framework in Frameworks */,
+				BED54C0F1C47EB820084517A /* AlamofireSwiftyJSON.framework in Frameworks */,
 				BEEEA9631C3D622200CEE183 /* libPods.a in Frameworks */,
 				BECBF6A81C1BDEEE008B4602 /* MobileCoreServices.framework in Frameworks */,
+				BED54C0D1C47EB820084517A /* Alamofire.framework in Frameworks */,
 				BE4766121C19AB6900DBED28 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,8 +307,7 @@
 				BEECD0251C0A99640088DA5F /* Resources */,
 				F87FF9BB111F959D4B85CE3D /* Embed Pods Frameworks */,
 				4EC000CF80251924422D898E /* Copy Pods Resources */,
-				BE74FBDB1C0AACD300F09DD4 /* CopyFiles */,
-				BEE6ED2B1C14A0D600EA920A /* Embed Frameworks */,
+				BED54C111C47EB820084517A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,7 +351,7 @@
 						DevelopmentTeam = NX4R8BSEYN;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};

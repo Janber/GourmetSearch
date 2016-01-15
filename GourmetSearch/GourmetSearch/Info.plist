@@ -15,11 +15,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.0.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>1.0.4</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>line</string>
@@ -35,10 +35,6 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>店舗地図で現在地を表示するために使用します。</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
